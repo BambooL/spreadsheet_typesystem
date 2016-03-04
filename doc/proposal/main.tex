@@ -18,11 +18,11 @@
 
 
 \section{Motivation}
-According to U.S. Bureau of Labor and Statistics, there will be fewer than 3 million professional programmers, but more than 55 million people using spreadsheets and databases at work by 2012~\cite{scaffidi2005}. Despite the popularity of spreadsheet programming, the lack of training of these non-professional end-user programmers leads to many errors in business spreadsheets that on average the cell error rate is 3.9\%~\cite{panko2016we}. These errors cost great loss.
+According to U.S. Bureau of Labor and Statistics, there will be fewer than 3 million professional programmers, but more than 55 million people using spreadsheets and databases at work by 2012~\cite{scaffidi2005}. Despite the popularity of spreadsheet programming, the lack of training of these non-professional end-user programmers leads to many errors in business spreadsheets that on average the cell error rate is 3.9\%~\cite{panko2016we}. These errors cost a great loss.
 
-Spreadsheet errors fall in to three categories: logical errors (45\%), mechanical errors (23\%), and omission errors (31\%). Logical errors cover the most part and the main reasons account for logical errors are mathematical and domain knowledge. Mechanical errors refer to the cases in which wrong cells are pointed at or typing errors occurs. Omission errors is similar to mechanical errors which happens due to the cases that leaves out necessary components. Because of the complex dependency in spreadsheet programming, these errors are hard to be detected or fixed clearly through manual check.
+Spreadsheet errors fall into three categories: logical errors (45\%), mechanical errors (23\%), and omission errors (31\%). Logical errors cover the most part and the main reasons account for logical errors are mathematical and domain knowledge. Mechanical errors refer to the cases in which wrong cells are pointed at or typing errors occurs. Omission errors are similar to mechanical errors that happen due to the cases leaving out necessary components. Because of the complex dependency in spreadsheet programming, these errors are hard to be detected or fixed clearly through manual check.
 
-In our study, we are interested in how to detect the mechanical errors, omission errors and part of logical errors in spreadsheet using static analysis techniques, like type system? 
+In our study, we are interested in how to detect the mechanical errors, omission errors and part of logical errors in spreadsheet using static analysis techniques, like type system. 
 
 \section{Method}
 In this section, we will detail the method for our study.
@@ -60,7 +60,7 @@ Basic Types: Dependent Type, AND Type, and OR Type.
 \end{itemize}
 
 \subsubsection{Typing Rules}
-To check whether every cell is well-typed, we also refer to a few typing rules. By conducting induction on the expressions, we have the rules as shown as follows: 
+To check whether every cell is well-typed, we also refer to a few typing rules. By conducting induction on the expressions, we have the rules shown as follows: 
 \begin{table}[!h]
 \centering
 \begin{tabular}{ l }
@@ -106,10 +106,10 @@ $\inferrule{{ e }_{ i }:{ t }_{ i }\quad  \vdash { t }_{ i } }
 % eq:: $ \quad \frac { (a,e)::u\quad \quad u{ = }_{ u }u'\quad  }{ (a,e)::u' } \\$ 
 \subsubsection{Judgments}
 \begin{enumerate}
-\item Every value that does not have a header is a well-typed. The type is ``1''.
-\item If a cell has value $v$ and header $t$, then it $t[v]$ is well-typed. The type can be recursively definded.
+\item Every value that does not have a header is well-typed. The type is ``1''.
+\item If a cell has value $v$ and header $t$, it is well-typed, and the type is $t[v]$. The type can be recursively definded.
 \item For AND Type, if there is no common ancestor, it is well-typed. That is because, e.g. the working hours in the example cannot simultaneously belongs to person A and person B. If so, it is possible to be incorrect.
-\item For OR Type, if there is a common header ancestor, it is well-typed. That is because, e.g. the sum of working hours in one week should not contain the numbers from week 1 and week 2. If so, it is possible to be incorrect.
+\item For OR Type, if there is a common header ancestor, it is well-typed. That is because, e.g. the sum of working hours in one week should not simultaneously contain the numbers from week 1 and week 2. If so, it is possible to be incorrect.
 \end{enumerate}
 
 
@@ -122,13 +122,13 @@ Refer to Figure~\ref{sheet}.
 \textbf{week[week1[23]]\&people[Green[23]] $|$ ... $|$ week[week1[37]]\&people[Edwards[37]]}. \\
 Since there is common ancestor week, thus with Judgment 4, we know it is well-typed.
 \item If there is a cell with formula ``A5 + C4", via analysis, we know it is typed as \textbf{people[Jones]$|$week[week2[31]]}.\\ 
-Since there is no common ancestor, it is ill-typed and it will be marked as a potential wrong cell.
+Since there is no common ancestor, it is ill-typed and it will be marked as a potentially wrong cell.
 \end{itemize}
 
 \section{Expectation of Project}
-In this section, we will list the expectation output of our study.
+In this section, we will list the expected output of our study.
 \subsection{Implementation}
-We are going to implement a type system for spreadsheet error detection. The following are the tools and paper we will refer to.
+We are going to implement a type system for spreadsheet error detection. The followings are the tools and papers we will refer to.
 \begin{enumerate}
 \item Parser: http://ewbi.blogs.com/develops/popular/excelformulaparsing.html
 \item Type system:
@@ -148,8 +148,7 @@ We are going to implement a type system for spreadsheet error detection. The fol
 We will report with a survey with all the papers in the bibtex file. We will propose possible improvement based on current implementation in two possible tracks: (1) Extend typing rules with operational semantics of more spreadsheet functions; (2) Automatic error fixing (creating a fixing language (DSL) and do syntactical heuristic search).
 
 \section{Plan}
-We will finish the implementation of basic type system and basic spatial analysis by the end of March; and extend the system in proposed direction till the mid of April.
-We will focus on report drafting in the left two weeks.
+We are going to do research on related work during the first two weeks of March. Based on what we have learned, we will finish the implementation of basic type system and basic spatial analysis by the end of March. After that, to get a step further, we will extend the system in proposed direction till the mid of April. Finally, we will focus on report drafting and finish the report in the left two weeks.
 
 \bibliographystyle{plain}
 \bibliography{bibfile}

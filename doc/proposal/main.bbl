@@ -1,199 +1,46 @@
-\begin{thebibliography}{}
+\begin{thebibliography}{1}
 
-\bibitem [\protect \citeauthoryear {%
-Abraham%
-\ \BBA {} Erwig%
-}{%
-Abraham%
-\ \BBA {} Erwig%
-}{%
-{\protect \APACyear {2004}}%
-}]{%
-Abraham2004}
-\APACinsertmetastar {%
-Abraham2004}%
-\begin{APACrefauthors}%
-Abraham, R.%
-\BCBT {}\ \BBA {} Erwig, M.%
-\end{APACrefauthors}%
-\unskip\
-\newblock
-\APACrefYearMonthDay{2004}{}{}.
-\newblock
-{\BBOQ}\APACrefatitle {{Header and Unit Inference for Spreadsheets Through
-  Spatial Analyses}} {{Header and Unit Inference for Spreadsheets Through
-  Spatial Analyses}}.{\BBCQ}
-\newblock
-\APACjournalVolNumPages{}{}{}{1--8}.
-\PrintBackRefs{\CurrentBib}
+\bibitem{abraham2004header}
+Robin Abraham and Martin Erwig.
+\newblock Header and unit inference for spreadsheets through spatial analyses.
+\newblock In {\em Visual Languages and Human Centric Computing, 2004 IEEE
+  Symposium on}, pages 165--172. IEEE, 2004.
 
-\bibitem [\protect \citeauthoryear {%
-Abraham%
-\ \BBA {} Erwig%
-}{%
-Abraham%
-\ \BBA {} Erwig%
-}{%
-{\protect \APACyear {2006}}%
-}]{%
-Abraham2006}
-\APACinsertmetastar {%
-Abraham2006}%
-\begin{APACrefauthors}%
-Abraham, R.%
-\BCBT {}\ \BBA {} Erwig, M.%
-\end{APACrefauthors}%
-\unskip\
-\newblock
-\APACrefYearMonthDay{2006}{}{}.
-\newblock
-{\BBOQ}\APACrefatitle {{UCheck : A Spreadsheet Type Checker for End Users *}}
-  {{UCheck : A Spreadsheet Type Checker for End Users *}}.{\BBCQ}
-\newblock
-\APACjournalVolNumPages{}{}{}{1--23}.
-\PrintBackRefs{\CurrentBib}
+\bibitem{abraham2006type}
+Robin Abraham and Martin Erwig.
+\newblock Type inference for spreadsheets.
+\newblock In {\em Proceedings of the 8th ACM SIGPLAN international conference
+  on Principles and practice of declarative programming}, pages 73--84. ACM,
+  2006.
 
-\bibitem [\protect \citeauthoryear {%
-Chambers%
-\ \BBA {} Erwig%
-}{%
-Chambers%
-\ \BBA {} Erwig%
-}{%
-{\protect \APACyear {2009}}%
-}]{%
-Chambers2009a}
-\APACinsertmetastar {%
-Chambers2009a}%
-\begin{APACrefauthors}%
-Chambers, C.%
-\BCBT {}\ \BBA {} Erwig, M.%
-\end{APACrefauthors}%
-\unskip\
-\newblock
-\APACrefYearMonthDay{2009}{}{}.
-\newblock
-{\BBOQ}\APACrefatitle {{Combining Spatial and Semantic Label Analysis}}
-  {{Combining Spatial and Semantic Label Analysis}}.{\BBCQ}
-\newblock
+\bibitem{chambers2009automatic}
+Chris Chambers and Martin Erwig.
+\newblock Automatic detection of dimension errors in spreadsheets.
+\newblock {\em Journal of Visual Languages \& Computing}, 20(4):269--283, 2009.
 
-\PrintBackRefs{\CurrentBib}
+\bibitem{cunha2015embedding}
+J{\'a}come Cunha, Joao~Paulo Fernandes, Jorge Mendes, and Joao Saraiva.
+\newblock Embedding, evolution, and validation of model-driven spreadsheets.
+\newblock {\em Software Engineering, IEEE Transactions on}, 41(3):241--263,
+  2015.
 
-\bibitem [\protect \citeauthoryear {%
-Cunha%
-, Fernandes%
-, Mendes%
-\BCBL {}\ \BBA {} Saraiva%
-}{%
-Cunha%
-\ \protect \BOthers {.}}{%
-{\protect \APACyear {2015}}%
-}]{%
-Cunha2015}
-\APACinsertmetastar {%
-Cunha2015}%
-\begin{APACrefauthors}%
-Cunha, J.%
-, Fernandes, J\BPBI P.%
-, Mendes, J.%
-\BCBL {}\ \BBA {} Saraiva, J.%
-\end{APACrefauthors}%
-\unskip\
-\newblock
-\APACrefYearMonthDay{2015}{}{}.
-\newblock
-{\BBOQ}\APACrefatitle {{Embedding, evolution, and validation of model-driven
-  spreadsheets}} {{Embedding, evolution, and validation of model-driven
-  spreadsheets}}.{\BBCQ}
-\newblock
-\APACjournalVolNumPages{IEEE Transactions on Software
-  Engineering}{41}{3}{241--263}.
-\newblock
-\begin{APACrefDOI} \doi{10.1109/TSE.2014.2361141} \end{APACrefDOI}
-\PrintBackRefs{\CurrentBib}
+\bibitem{fisher2005euses}
+Marc Fisher and Gregg Rothermel.
+\newblock The euses spreadsheet corpus: a shared resource for supporting
+  experimentation with spreadsheet dependability mechanisms.
+\newblock In {\em ACM SIGSOFT Software Engineering Notes}, volume~30, pages
+  1--5. ACM, 2005.
 
-\bibitem [\protect \citeauthoryear {%
-Fisher%
-\ \BBA {} Rothermel%
-}{%
-Fisher%
-\ \BBA {} Rothermel%
-}{%
-{\protect \APACyear {2005}}%
-}]{%
-fisher2005euses}
-\APACinsertmetastar {%
-fisher2005euses}%
-\begin{APACrefauthors}%
-Fisher, M.%
-\BCBT {}\ \BBA {} Rothermel, G.%
-\end{APACrefauthors}%
-\unskip\
-\newblock
-\APACrefYearMonthDay{2005}{}{}.
-\newblock
-{\BBOQ}\APACrefatitle {The EUSES spreadsheet corpus: a shared resource for
-  supporting experimentation with spreadsheet dependability mechanisms} {The
-  euses spreadsheet corpus: a shared resource for supporting experimentation
-  with spreadsheet dependability mechanisms}.{\BBCQ}
-\newblock
-\BIn{} \APACrefbtitle {ACM SIGSOFT Software Engineering Notes} {Acm sigsoft
-  software engineering notes}\ (\BVOL~30, \BPGS\ 1--5).
-\PrintBackRefs{\CurrentBib}
+\bibitem{panko2016we}
+Ray Panko.
+\newblock What we don't know about spreadsheet errors today: The facts, why we
+  don't believe them, and what we need to do.
+\newblock {\em arXiv preprint arXiv:1602.02601}, 2016.
 
-\bibitem [\protect \citeauthoryear {%
-Panko%
-}{%
-Panko%
-}{%
-{\protect \APACyear {2016}}%
-}]{%
-panko2016we}
-\APACinsertmetastar {%
-panko2016we}%
-\begin{APACrefauthors}%
-Panko, R.%
-\end{APACrefauthors}%
-\unskip\
-\newblock
-\APACrefYearMonthDay{2016}{}{}.
-\newblock
-{\BBOQ}\APACrefatitle {What We Don't Know About Spreadsheet Errors Today: The
-  Facts, Why We Don't Believe Them, and What We Need to Do} {What we don't know
-  about spreadsheet errors today: The facts, why we don't believe them, and
-  what we need to do}.{\BBCQ}
-\newblock
-\APACjournalVolNumPages{arXiv preprint arXiv:1602.02601}{}{}{}.
-\PrintBackRefs{\CurrentBib}
-
-\bibitem [\protect \citeauthoryear {%
-Scaffidi%
-, Shaw%
-\BCBL {}\ \BBA {} Myers%
-}{%
-Scaffidi%
-\ \protect \BOthers {.}}{%
-{\protect \APACyear {2005}}%
-}]{%
-scaffidi2005}
-\APACinsertmetastar {%
-scaffidi2005}%
-\begin{APACrefauthors}%
-Scaffidi, C.%
-, Shaw, M.%
-\BCBL {}\ \BBA {} Myers, B.%
-\end{APACrefauthors}%
-\unskip\
-\newblock
-\APACrefYearMonthDay{2005}{}{}.
-\newblock
-{\BBOQ}\APACrefatitle {Estimating the numbers of end users and end user
-  programmers} {Estimating the numbers of end users and end user
-  programmers}.{\BBCQ}
-\newblock
-\BIn{} \APACrefbtitle {Visual Languages and Human-Centric Computing, 2005 IEEE
-  Symposium on} {Visual languages and human-centric computing, 2005 ieee
-  symposium on}\ (\BPGS\ 207--214).
-\PrintBackRefs{\CurrentBib}
+\bibitem{scaffidi2005}
+Christopher Scaffidi, Mary Shaw, and Brad Myers.
+\newblock Estimating the numbers of end users and end user programmers.
+\newblock In {\em Visual Languages and Human-Centric Computing, 2005 IEEE
+  Symposium on}, pages 207--214. IEEE, 2005.
 
 \end{thebibliography}

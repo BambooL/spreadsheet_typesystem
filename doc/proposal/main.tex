@@ -59,7 +59,7 @@ Basic Types: Dependent Type, AND Type, and OR Type.
 \end{itemize}
 
 \subsubsection{Type Inference Rules}
-To 
+$ val:\quad \frac {  }{ v:1 } \\ ref:\quad \frac { (a,s(a))::u\quad \quad \quad \vdash u }{ a:u } \\ eq:\quad \quad \frac { e:u\quad \quad \quad u{ = }_{ u }u' }{ e:u' } \\ app:\quad \frac { { e }_{ i }:{ u }_{ i }\quad \quad \quad \vdash { u }_{ i } }{ { \omega  }^{ n }({ e }_{ 1 },\dots ,{ e }_{ n })::{ \mu  }_{ \omega  }(1,{ u }_{ 1 },\dots ,{ u }_{ n }) } \\ val::\quad \frac { a\notin dom(h) }{ (a,v)::1 } \\ ref::\quad \frac { (a,s(a))::u\quad \quad \quad (a',s(a'))::u'\quad \quad \quad \vdash u\quad \quad \quad \vdash u' }{ (a,a')::u\& u' } \\ dep::\quad \frac { h(a)=\{ { h }_{ 1 },\dots ,{ h }_{ k }\} \quad \quad \quad s({ h }_{ i })={ v }_{ i }\quad \quad ({ h }_{ i },{ v }_{ i })::{ { u }_{ i } }\quad \quad \vdash { u }_{ i }\quad  }{ (a,v)::{ u }_{ 1 }[{ u }_{ 2 }[\dots { u }_{ k }[v]\dots ]] } \\ eq::\quad \quad \frac { (a,e)::u\quad \quad u{ = }_{ u }u'\quad  }{ (a,e)::u' } \\ $
 \subsubsection{Judgments}
 \begin{enumerate}
 \item Every value that does not have a header is a well-typed.

@@ -1,10 +1,16 @@
-\begin{thebibliography}{1}
+\begin{thebibliography}{10}
 
 \bibitem{abraham2004header}
 Robin Abraham and Martin Erwig.
 \newblock Header and unit inference for spreadsheets through spatial analyses.
 \newblock In {\em Visual Languages and Human Centric Computing, 2004 IEEE
   Symposium on}, pages 165--172. IEEE, 2004.
+
+\bibitem{abraham2005communicate}
+Robin Abraham and Martin Erwig.
+\newblock How to communicate unit error messages in spreadsheets.
+\newblock In {\em ACM SIGSOFT Software Engineering Notes}, volume~30, pages
+  1--5. ACM, 2005.
 
 \bibitem{abraham2006type}
 Robin Abraham and Martin Erwig.
@@ -13,10 +19,85 @@ Robin Abraham and Martin Erwig.
   on Principles and practice of declarative programming}, pages 73--84. ACM,
   2006.
 
+\bibitem{abraham2007ucheck}
+Robin Abraham and Martin Erwig.
+\newblock Ucheck: A spreadsheet type checker for end users.
+\newblock {\em Journal of Visual Languages \& Computing}, 18(1):71--95, 2007.
+
+\bibitem{abraham2009mutation}
+Robin Abraham and Martin Erwig.
+\newblock Mutation operators for spreadsheets.
+\newblock {\em Software Engineering, IEEE Transactions on}, 35(1):94--108,
+  2009.
+
+\bibitem{abraham2007type}
+Robin Abraham, Martin Erwig, and Scott Andrew.
+\newblock A type system based on end-user vocabulary.
+\newblock In {\em Visual Languages and Human-Centric Computing, 2007. VL/HCC
+  2007. IEEE Symposium on}, pages 215--222. IEEE, 2007.
+
+\bibitem{abreu2015using}
+Rui Abreu, Birgit Hofer, Alexandre Perez, and Franz Wotawa.
+\newblock Using constraints to diagnose faulty spreadsheets.
+\newblock {\em Software Quality Journal}, 23(2):297--322, 2015.
+
+\bibitem{abreu2012constraint}
+Rui Abreu, Andr{\'e} Riboira, and Franz Wotawa.
+\newblock Constraint-based debugging of spreadsheets.
+\newblock In {\em CIbSE}, pages 1--14, 2012.
+
+\bibitem{adam2015towards}
+Sorin Adam and Ulrik~Pagh Schultz.
+\newblock Towards tool support for spreadsheet-based domain-specific languages.
+\newblock In {\em Proceedings of the 2015 ACM SIGPLAN International Conference
+  on Generative Programming: Concepts and Experiences}, pages 95--98. ACM,
+  2015.
+
+\bibitem{ahmad2003type}
+Yanif Ahmad, Tudor Antoniu, Sharon Goldwater, and Shriram Krishnamurthi.
+\newblock A type system for statically detecting spreadsheet errors.
+\newblock In {\em Automated Software Engineering, 2003. Proceedings. 18th IEEE
+  International Conference on}, pages 174--183. IEEE, 2003.
+
+\bibitem{antoniu2004validating}
+Tudor Antoniu, Paul~A Steckler, Shriram Krishnamurthi, Erich Neuwirth, and
+  Matthias Felleisen.
+\newblock Validating the unit correctness of spreadsheet programs.
+\newblock In {\em Software Engineering, 2004. ICSE 2004. Proceedings. 26th
+  International Conference on}, pages 439--448. IEEE, 2004.
+
+\bibitem{burnett2002visually}
+Margaret Burnett and Martin Erwig.
+\newblock Visually customizing inference rules about apples and oranges.
+\newblock In {\em Human Centric Computing Languages and Environments, 2002.
+  Proceedings. IEEE 2002 Symposia on}, pages 140--148. IEEE, 2002.
+
+\bibitem{chambers2008dimension}
+Chris Chambers and Martin Erwig.
+\newblock Dimension inference in spreadsheets.
+\newblock In {\em Visual Languages and Human-Centric Computing, 2008. VL/HCC
+  2008. IEEE Symposium on}, pages 123--130. IEEE, 2008.
+
 \bibitem{chambers2009automatic}
 Chris Chambers and Martin Erwig.
 \newblock Automatic detection of dimension errors in spreadsheets.
 \newblock {\em Journal of Visual Languages \& Computing}, 20(4):269--283, 2009.
+
+\bibitem{chambers2009combining}
+Chris Chambers and Martin Erwig.
+\newblock Combining spatial and semantic label analysis.
+\newblock 2009.
+
+\bibitem{chambers2010reasoning}
+Chris Chambers and Martin Erwig.
+\newblock Reasoning about spreadsheets with labels and dimensions.
+\newblock {\em Journal of Visual Languages \& Computing}, 21(5):249--262, 2010.
+
+\bibitem{coblenz2005using}
+Michael~J Coblenz, Andrew~J Ko, and Brad~A Myers.
+\newblock Using objects of measurement to detect spreadsheet errors.
+\newblock In {\em Visual Languages and Human-Centric Computing, 2005 IEEE
+  Symposium on}, pages 314--316. IEEE, 2005.
 
 \bibitem{cunha2015embedding}
 J{\'a}come Cunha, Joao~Paulo Fernandes, Jorge Mendes, and Joao Saraiva.
@@ -24,12 +105,48 @@ J{\'a}come Cunha, Joao~Paulo Fernandes, Jorge Mendes, and Joao Saraiva.
 \newblock {\em Software Engineering, IEEE Transactions on}, 41(3):241--263,
   2015.
 
+\bibitem{dou2014spreadsheet}
+Wensheng Dou, Shing-Chi Cheung, and Jun Wei.
+\newblock Is spreadsheet ambiguity harmful? detecting and repairing spreadsheet
+  smells due to ambiguous computation.
+\newblock In {\em Proceedings of the 36th International Conference on Software
+  Engineering}, pages 848--858. ACM, 2014.
+
+\bibitem{erwig2002adding}
+Martin Erwig and Margaret Burnett.
+\newblock Adding apples and oranges.
+\newblock In {\em Practical Aspects of Declarative Languages}, pages 173--191.
+  Springer, 2002.
+
 \bibitem{fisher2005euses}
 Marc Fisher and Gregg Rothermel.
 \newblock The euses spreadsheet corpus: a shared resource for supporting
   experimentation with spreadsheet dependability mechanisms.
 \newblock In {\em ACM SIGSOFT Software Engineering Notes}, volume~30, pages
   1--5. ACM, 2005.
+
+\bibitem{hermans2014bumblebee}
+Felienne Hermans and Danny Dig.
+\newblock Bumblebee: A refactoring environment for spreadsheet formulas.
+\newblock In {\em Proceedings of the 22nd ACM SIGSOFT International Symposium
+  on Foundations of Software Engineering}, pages 747--750. ACM, 2014.
+
+\bibitem{hermans2015detecting}
+Felienne Hermans, Martin Pinzger, and Arie van Deursen.
+\newblock Detecting and refactoring code smells in spreadsheet formulas.
+\newblock {\em Empirical Software Engineering}, 20(2):549--575, 2015.
+
+\bibitem{hofer2014does}
+Birgit Hofer and Franz Wotawa.
+\newblock Why does my spreadsheet compute wrong values?
+\newblock In {\em Software Reliability Engineering (ISSRE), 2014 IEEE 25th
+  International Symposium on}, pages 112--121. IEEE, 2014.
+
+\bibitem{lawrance2006sharing}
+Joseph Lawrance, Robin Abraham, Margaret Burnett, and Martin Erwig.
+\newblock Sharing reasoning about faults in spreadsheets: An empirical study.
+\newblock In {\em Visual Languages and Human-Centric Computing, 2006. VL/HCC
+  2006. IEEE Symposium on}, pages 35--42. IEEE, 2006.
 
 \bibitem{panko2016we}
 Ray Panko.

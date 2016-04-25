@@ -4,8 +4,6 @@ import os
 import re
 from openpyxl import Workbook
 from openpyxl import load_workbook
-import spatial
-import checker
 from openpyxl.formula import Tokenizer
 import headerchecker
 
@@ -43,23 +41,24 @@ if __name__ == "__main__":
 				for sheet in wb:
 					store_header = {}
 					problem_cell = []
-					for cell in sheet:
-						if (is_header(cell)):
-							for sub_cell in following_column:
-								store_header = update1(cell, sub_cell, store_header)
-							for sub_cell in following_row:
-								store_header = update1(cell, sub_cell, store_header)
-						elif (cell.data_type = 'f'):
-							tok = Tokenizer(cell._value)
-							tok.parse()
-							for token in tok.items:
-								if (token.type == 'FUNC'):
-									if (token.value == "AVERAGE(" or token.value == "SUM("):
-										refrange = re.search(r'[A-Z][0-9]+\:[A-Z][0-9]+', cell._value)
-										store_header = update2(cell, refrange, store_header)
-									if (token.value == ""): # refer to other cell
-										refcell =
-										store_header = update1(cell, refcell, store_header)
+					for row in sheet:
+						for cell in row:
+							if (is_header(cell)):
+								for sub_cell in following_column:
+									store_header = update1(cell, sub_cell, store_header)
+								for sub_cell in following_row:
+									store_header = update1(cell, sub_cell, store_header)
+							elif (cell.data_type = 'f'):
+								tok = Tokenizer(cell._value)
+								tok.parse()
+								for token in tok.items:
+									if (token.type == 'FUNC'):
+										if (token.value == "AVERAGE(" or token.value == "SUM("):
+											refrange = re.search(r'[A-Z][0-9]+\:[A-Z][0-9]+', cell._value)
+											store_header = update2(cell, refrange, store_header)
+										if (token.value == ""): # refer to other cell
+											refcell =
+											store_header = update1(cell, refcell, store_header)
 					# {A5:A2, A2:A1} 
 					for key, value in store_header.iteritems():
 						if (headerchecker.check_and(key, store_header)):
@@ -67,7 +66,14 @@ if __name__ == "__main__":
 						else:
 							problem_cell.append(key)
 
-
+					for cell in sheet:
+						if (cell.coordinate in problem_cell):
+							for item in store_header:
+								if (type(item) is list):
+									for e in item:
+										mark(e, wb)
+								else:
+									mark(item, wb)
 
 
 def update1(cell, sub_cell, store_header):
@@ -89,7 +95,7 @@ def update2(cell, refrange, store_header):
 	return store_header
 
 def is_header(cell):
-	if (cell)
+	if (cell.)
 
 
 

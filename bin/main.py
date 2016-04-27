@@ -179,7 +179,7 @@ if __name__ == "__main__":
 						# 	refcell =
 						# 	store_header = update1(cell, refcell, store_header)
 	# {A5:A2, A2:A1} 
-	# print store_header
+	print store_header
 	for key, value in store_header.iteritems():
 		if (headerchecker.check_and(key, store_header)):
 			continue

@@ -18,21 +18,23 @@ def check_and(key, store):
 	allheaders = []
 	if (len(headers) == 1):
 		return True
-	for i in range(len(headers)):
+	for i in range(len(headers) - 1):
+		if headers[i] == "1":
+			continue
 		if type(headers[i]) is list:
 			if (check_or(headers[i])):
 				continue
 			else:
 				return False
-		for j in range(len(headers) - i):
+		for j in range(i + 1, len(headers) - i):
+			if headers[j] == '1':
+				continue
 			if type(headers[j]) is list:
 				if (check_or(headers[j])):
 					continue
 				else:
 					return False
-			if not common_ancestor(headers[i], headers[j]):
-				continue
-			else:
+			if common_ancestor(headers[i], headers[j]):
 				return False
 	return True
 
@@ -44,7 +46,6 @@ def check_or(headers):
 			else:
 				return False
 	return True
-				
 
 # {B3:[A2, C1],  B2:[B1],  A2:[A1], C1:[1], A1:[1]}  common_ancestor(B3, B2) -> False
 # {B3:[A3],  B2:[B1, A1],  B1:[1], A3:[A2], A2: [A1], A1:[1]} common_ancestor(B3, B2) -> True

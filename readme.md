@@ -44,7 +44,7 @@
 * If there is a cell with formula "A5 + C4", via analysis, we know it is typed as people[Jones]|week[week2[31]]. Since there is no common ancestor, it is ill-typed and it will be marked as a potential wrong cell. -->
 
 ## Give it a try 
-! [example revised from corpus](misc/img/test.png)
+![example revised from corpus](misc/img/test.png)
 ### Command
 * ``python main.py input_file output_file`` (e.g. ``python main.py test.xlsx res.xlsx``)
 * ``input_file``: the path to the input file. The file should be .xlsx file.
@@ -66,7 +66,7 @@ Judgement: No common ancestor, thus ill-typed.
 Similar analysis applied.
 
 #### Detection
-! [example revised from corpus](misc/img/correct.png)
+![example revised from corpus](misc/img/correct.png)
 * The ill-typed cells are marked in red.
 * One of the limitation of this type checker is that it cannot find the root causes.
 

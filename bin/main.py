@@ -2,6 +2,7 @@ import openpyxl
 import parser
 import os
 import re
+import sys
 from openpyxl import Workbook
 from openpyxl import load_workbook
 from openpyxl.formula import Tokenizer
@@ -141,64 +142,70 @@ if __name__ == "__main__":
 	# 	folder = files[2]
 	# 	for i in range(len(folder)):
 	# 		if (re.search("xlsx", str(folder[i]))):
-	wb = load_workbook(filename = "../data/cs101/bad/test.xlsx")
-	sheet = wb["Sheet1"]
-	store_header = {}
-	problem_cell = []
-	for row in sheet:
-		for cell in row:
-			if (is_header(cell)):
-				if (cell.coordinate in store_header.keys()):
-					store_header[cell.coordinate].append("1")
-				else:
-					store_header[cell.coordinate] = ["1"]
-				store_header = headerspread(cell, sheet, store_header)
-				for item in sheet._merged_cells:
-					if (item.find(cell.coordinate) != -1):
-						for r in sheet[item]:
-							for c in r:
-								store_header[c.coordinate] = ["1"]
-								store_header = headerspread(c, sheet, store_header)
-			elif (cell.data_type == 'f'):
-				tok = Tokenizer(cell._value)
-				tok.parse()
-				for token in tok.items:
-					if (re.match(r'[A-Z][0-9]+$', cell.value[1:])):
-						store_header = update1(sheet[cell.value[1:]], cell, store_header)
-					if (token.value == "AVERAGE(" or token.value == "SUM("):
-						refrange = re.search(r'[A-Z][0-9]+\:[A-Z][0-9]+', cell._value)
-						store_header = update2(cell, refrange.group(0), store_header)
-					# if (token.value == "*"):
-					# 	value = cell.value[1:]
-					# 	sub_cell1 = sheet[value.split("*")[0]]
-					# 	sub_cell2 = sheet[value.split("*")[1]]
-					# 	store_header = update2(sub_cell1, cell, store_header)
-					# 	store_header = update2(sub_cell2, cell, store_header)
+	if len(sys.argv) != 3:
+		print 'Invalid number of arguments passed.'
+		print 'Correct usage: python main.py input_file output_file'
+	else:
+		input_file = sys.argv[1]
+		output_file = sys.argv[2]
+		wb = load_workbook(input_file)
+		sheet = wb["Sheet1"]
+		store_header = {}
+		problem_cell = []
+		for row in sheet:
+			for cell in row:
+				if (is_header(cell)):
+					if (cell.coordinate in store_header.keys()):
+						store_header[cell.coordinate].append("1")
+					else:
+						store_header[cell.coordinate] = ["1"]
+					store_header = headerspread(cell, sheet, store_header)
+					for item in sheet._merged_cells:
+						if (item.find(cell.coordinate) != -1):
+							for r in sheet[item]:
+								for c in r:
+									store_header[c.coordinate] = ["1"]
+									store_header = headerspread(c, sheet, store_header)
+				elif (cell.data_type == 'f'):
+					tok = Tokenizer(cell._value)
+					tok.parse()
+					for token in tok.items:
+						if (re.match(r'[A-Z][0-9]+$', cell.value[1:])):
+							store_header = update1(sheet[cell.value[1:]], cell, store_header)
+						if (token.value == "AVERAGE(" or token.value == "SUM("):
+							refrange = re.search(r'[A-Z][0-9]+\:[A-Z][0-9]+', cell._value)
+							store_header = update2(cell, refrange.group(0), store_header)
+						# if (token.value == "*"):
+						# 	value = cell.value[1:]
+						# 	sub_cell1 = sheet[value.split("*")[0]]
+						# 	sub_cell2 = sheet[value.split("*")[1]]
+						# 	store_header = update2(sub_cell1, cell, store_header)
+						# 	store_header = update2(sub_cell2, cell, store_header)
 
-						# if (token.value == ""): # refer to other cell
-						# 	refcell =
-						# 	store_header = update1(cell, refcell, store_header)
-	# {A5:A2, A2:A1} 
-	print store_header
-	for key, value in store_header.iteritems():
-		if (headerchecker.check_and(key, store_header)):
-			continue
-		else:
-			problem_cell.append(key)
-	redFill = PatternFill(start_color = 'FFFF0000', end_color = 'FFFF0000', fill_type = 'solid')
-	print ("Proble Cells:")
-
-	for key, value in store_header.iteritems():
-		for t in value:
-			if cell.coordinate in t:
+							# if (token.value == ""): # refer to other cell
+							# 	refcell =
+							# 	store_header = update1(cell, refcell, store_header)
+		# {A5:A2, A2:A1} 
+		# print store_header
+		for key, value in store_header.iteritems():
+			if (headerchecker.check_and(key, store_header)):
+				continue
+			else:
 				problem_cell.append(key)
-	for e in problem_cell:
-		print e
-		marked_cell = sheet.cell(e)
-		marked_cell.fill = redFill
-							
+		redFill = PatternFill(start_color = 'FFFF0000', end_color = 'FFFF0000', fill_type = 'solid')
+		print ("Proble Cells:")
 
-	wb.save("res.xlsx")
+		for key, value in store_header.iteritems():
+			for t in value:
+				if cell.coordinate in t:
+					problem_cell.append(key)
+		for e in problem_cell:
+			print e
+			marked_cell = sheet.cell(e)
+			marked_cell.fill = redFill
+								
+
+		wb.save(output_file)
 
 
 
